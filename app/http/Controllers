@@ -1,1 +1,22 @@
+<?php
 
+namespace App\Http\Controllers\Api;
+
+use App\Http\Controllers\Controller;
+
+class MovieController extends Controller
+{
+    public function getAllTeams()
+    {
+        $teams = [
+            ['name' => 'Manchester City', 'stadium' => 'Etihad Stadium'],
+            ['name' => 'Liverpool', 'stadium' => 'Anfield'],
+            ['name' => 'Arsenal', 'stadium' => 'Emirates Stadium'],
+        ];
+
+        return response()->json([
+            'status' => 'success',
+            'data' => $teams
+        ]);
+    }
+}
